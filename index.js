@@ -13,10 +13,13 @@ fs.writeFile("./build/current date_time.txt", date,(error)=> {
     console.log("file created")
 })
 
+//Take Random port ;
+
 const PORT = process.env.PORT;
 
 app.listen(PORT,()=>console.log(`server is started in ${PORT}`))
 
+//Api to read files from directory
 
 app.get("/",(req,res)=>{
 
@@ -24,7 +27,7 @@ app.get("/",(req,res)=>{
         console.log(files)
         res.send(files)
         
-    })    
+    })
      
 })
 
